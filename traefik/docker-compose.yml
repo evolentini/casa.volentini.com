@@ -1,5 +1,5 @@
 # docker-compose.yml
-version: '3.7'
+version: '3.8'
 
 services:
   traefik:
@@ -14,9 +14,10 @@ services:
     volumes:
       - /etc/localtime:/etc/localtime:ro
       - /var/run/docker.sock:/var/run/docker.sock:ro
-      - ./data/traefik.yml:/traefik.yml:ro
-      - ./data/acme.json:/acme.json
-      - ./data/configurations:/configurations
+      # - ./data/traefik.yml:/traefik.yml:ro
+      - ./traefik.toml:/traefik.toml:ro
+      - ./acme.json:/acme.json
+      # - ./data/configurations:/configurations
     networks:
       - proxy
     labels:

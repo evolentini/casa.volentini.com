@@ -1,0 +1,4 @@
+[http.middlewares.simpleAuth.basicAuth]
+    users = [
+        "evolentini:$2y$10$iz4TIrE3hNFbv5gXgh6Gauh/r23caN/CU4Ga5TKe64PkmU1/9MKR2"
+    ]
